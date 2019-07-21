@@ -1,0 +1,77 @@
+ul{
+    list-style: none;
+    padding-left: 0;
+
+}
+/*avatar-group*/
+ul li {
+    border-bottom: 1px solid #230f37;
+    overflow: hidden;
+
+   }
+
+.question-list-group{
+    width: 38px;
+    height: 100%;
+    float: left;
+}
+
+.question-list-group .avatar{
+    border-radius: 20%;
+    width: 38px;
+    height: 38px;
+}
+
+.question-group{
+    float: left;
+    width: 660px;
+    margin-left: 10px;
+}
+
+.question-title a{
+    color: #225599;
+    font-weight: 900;
+}
+
+.question-info {
+    text-align: right;
+}
+
+.question-info .question-author{
+    margin-right: 20px;
+}
+
+/*超过四行就显示省略号,这个方法可行，但调试麻烦，通用的不行*/
+/*.question-content {*/
+    /*!*边框*!*/
+  /*margin: 10px;*/
+/*}*/
+
+/*.question-content {*/
+  /*position: relative;*/
+  /*width: 601px;*/
+  /*max-height: 6em;*/
+  /*line-height: 1.5;*/
+  /*overflow: hidden;*/
+  /*!*outline: 1px solid #ff9900;*!*/
+/*}*/
+/*.question-content::before {*/
+  /*content: '...';*/
+  /*position: absolute;*/
+  /*z-index: 1;*/
+  /*bottom: 0;*/
+  /*right: 0;*/
+  /*width: 1.5em;*/
+  /*padding-left: 3px;*/
+  /*box-sizing: border-box;*/
+  /*background-color: white;*/
+/*}*/
+/*.question-content::after {*/
+  /*content: '';*/
+  /*display: inline-block;*/
+  /*position: absolute;*/
+  /*z-index: 2;*/
+  /*width: 100%;*/
+  /*height: 100%;*/
+  /*background-color: white;*/
+/*}*/

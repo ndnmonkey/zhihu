@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}编辑{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename = "css/question.css") }}">
+
+    <script src="{{ url_for('static', filename='tinymce/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tinymce_setup.js') }}"></script>
+
+{% endblock %}
+{% block main %}
+
+     <form  method="post" action="">
+         <h3 class="page-title">发布问题</h3>
+         <input type="text" class="form-control" name="title" placeholder="标题">
+         <input class="editor" name="content" id="content" placeholder="内容">
+         <button type="submit" class="btn btn-primary btn-block">立即提交</button>
+    </form>
+
+{% endblock %}
+

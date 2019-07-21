@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}登录{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename = "css/login.css") }}">{% endblock %}
+{% block main %}
+
+    <form action="" method="post">
+        <div class="form-container">
+
+              <div class="form-group">
+                  <h3 class="page-title">登录</h3>
+        {#        <label for="exampleInputEmail1"></label>#}
+                <input type="text" class="form-control" name="telephone" placeholder="电话号码">
+              </div>
+              <div class="form-group">
+        {#        <label for="exampleInputPassword1"></label>#}
+                <input type="password" class="form-control" name="password" placeholder="密码">
+              </div>
+            {% if get_flashed_messages()[0] %}
+{#                 {{ get_flashed_messages()[0] }}#}
+                <div class="alert alert-danger" >{{ get_flashed_messages()[0] }}</div>
+            {% else %}
+                <br>
+            {% endif %}
+
+
+              <button type="submit" class="btn btn-primary btn-block">立即登录</button>
+            <p align="center" style="margin: 5px">还没注册？<a href="{{ url_for('regist') }}">点击这里</a>注册</p>
+{#            btn-block使得button和上一级块等宽#}
+        </div>
+    </form>
+
+{% endblock %}

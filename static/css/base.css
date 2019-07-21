@@ -1,0 +1,16 @@
+.navigator{
+    align-self: center;
+
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+
+}
+.main{
+    /*background: #eeeeee;*/
+    /*background: #F5F5F5;*/
+    width: 730px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 10px;
+}

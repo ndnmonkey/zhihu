@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename = "css/index.css") }}">
+{% endblock %}
+
+{% block main %}
+        <ul>
+        {% for question in questions %}
+
+            <li>
+                <div class="question-list-group">
+                    <img src="{{ url_for('static',filename = "images/dajun1.png")}}" alt="" class="avatar">
+                </div>
+
+                <div class="question-group">
+
+                    <p class="question-title">
+{#                    <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a>#}
+{#    如果当前的问题id大于==id，则给它一个new标签，否则就按照常规输出#}
+                        {% if question.id ==  question_max_id   %}
+{#                            <h6>{{ question.title }} <span class="label label-default">New</span></h6>#}
+                           <h6> <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a> <span class="label label-default">New</span></h6>
+                        {% else %}
+                            <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a>
+                        {% endif %}
+
+{#                        #这里注意下带其他参数的question_id的用法#}
+                    </p>
+
+                    <p class="question-content" >
+{#                        这里的使得把形如“<p>&nbsp; &nbsp;打撒</p><p>&nbsp;</p>”这样的文本按照样式显示出来。#}
+                        {{ question.content|safe }}
+                    </p>
+
+                    <div class="question-info">
+                        <span class="question-author">
+                            <a href="{{ url_for('other_user_info',anwser_name =question.author.username) }}">{{ question.author.username }}</a>
+                        </span>
+
+                        <span class="question-time">
+                            {{ question.create_time }}
+                        </span>
+                    </div>
+
+                </div>
+            </li>
+
+        {% endfor %}
+
+{#    当前页数：{{ paginate.page }}#}
+{#    总页数：{{ paginate.pages }}#}
+{#    一共有{{ paginate.total }}条数据#}
+{#    <br>#}
+
+{#    {% if paginate.has_prev %}#}
+{#        <a href="?page={{ paginate.prev_num }}">上一页</a>#}
+{#    {% endif %}#}
+{#    页码：#}
+{##}
+{#    {% for i in paginate.iter_pages() %}#}
+{#        <a href="?page={{ i }}">{{ i }}</a>#}
+{#    {% endfor %}#}
+{##}
+{#    {% if paginate.has_next %}#}
+{#        <a href="?page={{ paginate.next_num }}">下一页</a>#}
+{#    {% endif %}#}
+{#    </ul>#}
+
+
+{#下面是只有前后页的情况#}
+{#<nav aria-label="...">#}
+{#  <ul class="pager">#}
+{#  <li class="previous"><a href="?page={{ paginate.prev_num }}"><span aria-hidden="true">&larr;</span> 上一页</a></li>#}
+{#      {% if paginate.page ==1 %}#}
+{#               <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> 上一页</a></li>#}
+{#      {% else %}#}
+{#            <li class="previous"><a href="?page={{ paginate.prev_num }}"><span aria-hidden="true">&larr;</span> 上一页</a></li>#}
+{#      {% endif %}#}
+{#      {% if paginate.page >= paginate.pages %}#}
+{#           <li class="next"><a href=#">下一页 <span aria-hidden="true">&rarr;</span></a></li>#}
+{#      {% else %}#}
+{#          <li class="next"><a href="?page={{ paginate.next_num }}">下一页 <span aria-hidden="true">&rarr;</span></a></li>#}
+{#      {% endif %}#}
+{#  </ul>#}
+{#</nav>#}
+
+{#下面是直接点每一页  加  前后页的情况#}
+<nav aria-label="...">
+  <ul class="pagination">
+{#  当前页面为第一页，则把前翻disable#}
+        {% if paginate.page == 1 %}
+            <li class="disable">
+                  <span>
+                        <span aria-hidden="true">&laquo;</span>
+                  </span>
+             </li>
+        {% else %}
+            <li class="active">
+                  <span>
+                        <span aria-hidden="true">&laquo;</span>
+                  </span>
+             </li>
+        {% endif %}
+
+{#要用“paginate.iter_pages()”，这里不能用“paginate.pages”（总页数），不然会返回“TypeError: 'int' object is not iterable”#}
+          {% for i in  paginate.iter_pages() %}
+                <li class="active">
+                     <a href="?page={{ i }}">{{ i }}</a>
+                </li>
+          {% endfor %}
+
+{#  当前页面为最后一页，则把前翻disable#}
+        {% if paginate.page == paginate.pages %}
+            <li class="disable">
+                  <span>
+                        <span aria-hidden="true">&raquo;</span>
+                  </span>
+             </li>
+        {% else %}
+            <li class="active">
+                  <span>
+                        <span aria-hidden="true">&raquo;</span>
+                  </span>
+             </li>
+        {% endif %}
+
+  </ul>
+
+</nav>
+
+    当前页数：{{ paginate.page }}
+    总页数：{{ paginate.pages }}
+    一共有{{ paginate.total }}条数据
+
+
+{% endblock %}

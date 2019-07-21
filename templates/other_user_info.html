@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}用户名：{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename = "css/login.css") }}">{% endblock %}
+{% block main %}
+
+
+{#<h3 align="center">{{ user_name }} 的个人简介</h3>#}
+<table class="table table-hover">
+<caption align="center">
+    <h3 align="center">{{ user_name }} 的个人简介</h3>
+</caption>
+    <tr>
+        <td><h4>用户昵称：</h4></td>
+        <td><h4>{{ user_name }}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>联系方式：</h4></td>
+        <td><h4>{{ user_telephone }}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>工作类型：</h4></td>
+        <td><h4>{{ user_job }}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>所在城市：</h4></td>
+        <td><h4>{{ user_city }}</h4></td>
+    </tr>
+    <tr>
+        <td><h4>自我介绍：</h4></td>
+        <td><h4>{{ user_introduce }}</h4></td>
+    </tr>
+</table>
+{#<h3 align="center">{{ user_name }} 写过的 ({{ user_ques_num }}) 篇文章</h3>#}
+<table class="table table-hover">
+
+ <caption align="center">  <h3 align="center">{{ user_name }} 写过的 <a href="">{{ user_ques_num }}</a> 篇文章</h3>  </caption>
+    {% for i in user_ques %}
+        <tr>
+            <td>
+                <a href="{{ url_for('detail',question_id = i.id) }}">{{ i.title }}</a>
+{#                {{ i.title }}#}
+
+            </td>
+
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

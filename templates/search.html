@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename = "css/index.css") }}">
+{% endblock %}
+
+{% block main %}
+        <ul>
+        {% for question in questions %}
+
+            <li>
+                <div class="question-list-group">
+                    <img src="{{ url_for('static',filename = "images/dajun1.png")}}" alt="" class="avatar">
+                </div>
+
+                <div class="question-group">
+
+                    <p class="question-title">
+{#                    <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a>#}
+{#    如果当前的问题id大于==id，则给它一个new标签，否则就按照常规输出#}
+                        {% if question.id ==  question_max_id   %}
+{#                            <h6>{{ question.title }} <span class="label label-default">New</span></h6>#}
+                            <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a> <span class="label label-default">New</span>
+                        {% else %}
+                            <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a>
+                        {% endif %}
+
+{#                        #这里注意下带其他参数的question_id的用法#}
+                    </p>
+
+                    <p class="question-content" >
+{#                        这里的使得把形如“<p>&nbsp; &nbsp;打撒</p><p>&nbsp;</p>”这样的文本按照样式显示出来。#}
+                        {{ question.content|safe }}
+                    </p>
+
+                    <div class="question-info">
+                        <span class="question-author">
+                            <a href="{{ url_for('other_user_info',anwser_name =question.author.username) }}">{{ question.author.username }}</a>
+                        </span>
+
+                        <span class="question-time">
+                            {{ question.create_time }}
+                        </span>
+                    </div>
+
+                </div>
+            </li>
+
+        {% endfor %}
+
+{% endblock %}
