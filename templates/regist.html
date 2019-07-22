@@ -3,13 +3,57 @@
 {% block head %}<link rel="stylesheet" href="{{ url_for('static',filename = "css/regist.css") }}">{% endblock %}
 {% block main %}
 
-
-    <form action="" method="post">
+    {% if user %}
+        <form action="" method="post">
         <div class="form-container">
 
               <div class="form-group">
                   <h3 class="page-title">
-                      注册/修改
+                      修改信息
+                  </h3>
+        {#        <label for="exampleInputEmail1"></label>#}
+                <input type="text" class="form-control" name="telephone" placeholder="电话号码"  required value="{{ user.telephone }}">
+{#                   <strong>Warning!</strong> Better check yourself, you're not looking too good.#}
+              </div>
+               <div class="form-group">
+        {#        <label for="exampleInputPassword1"></label>#}
+                <input type="text" class="form-control" name="username" placeholder="用户名" required value="{{ user.username }}">
+              </div>
+{#              <div class="form-group">#}
+        {#        <label for="exampleInputPassword1"></label>#}
+{#                <input type="password" class="form-control" name="password1" placeholder="密码" required value="">#}
+{#              </div>#}
+{#               <div class="form-group">#}
+        {#        <label for="exampleInputPassword1"></label>#}
+{#                <input type="password" class="form-control" name="password2" placeholder="确认密码" required value="">#}
+{#              </div>#}
+
+                           <div class="form-group">
+        {#        <label for="exampleInputPassword1"></label>#}
+                <input type="text" class="form-control" name="city"  placeholder="所在城市" required value="{{ user.city }}">
+              </div>
+                           <div class="form-group">
+        {#        <label for="exampleInputPassword1"></label>#}
+                <input type="text" class="form-control" name="job" placeholder="工作" required value="{{ user.job }}">
+              </div>
+                           <div class="form-group">
+        {#        <label for="exampleInputPassword1"></label>#}
+                <input type="text" class="form-control" name="introduce" placeholder="自我介绍" required value="{{ user.introduce }}">
+              </div>
+
+
+              <button type="submit" class="btn btn-primary btn-block">修改</button>
+{#            btn-block使得button和上一级块等宽#}
+
+        </div>
+    </form>
+    {% else %}
+        <form action="" method="post">
+        <div class="form-container">
+
+              <div class="form-group">
+                  <h3 class="page-title">
+                      注册
                   </h3>
         {#        <label for="exampleInputEmail1"></label>#}
                 <input type="text" class="form-control" name="telephone" placeholder="电话号码"  >
@@ -42,11 +86,12 @@
               </div>
 
 
-              <button type="submit" class="btn btn-primary btn-block">注册/修改</button>
+              <button type="submit" class="btn btn-primary btn-block">注册</button>
 {#            btn-block使得button和上一级块等宽#}
 
         </div>
     </form>
+    {% endif %}
 
 
 {% endblock %}

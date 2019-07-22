@@ -31,7 +31,7 @@ class User(db.Model):
 
     def check_hash_password(self,raw_password):  #这里的参数是hash过的参数以及原始传入hash
         password = check_password_hash(self.password,raw_password)
-        return password  #得到原始用户
+        return password  #返回bool
 
 class Question(db.Model):
     __tablename__ = "question"

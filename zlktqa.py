@@ -5,6 +5,7 @@ import config
 from decorators import login_required
 from sqlalchemy import or_
 # from flask_paginate import Pagination,get_page_parameter
+from werkzeug.security import generate_password_hash,check_password_hash
 
 app = Flask(__name__)
 app.config.from_object(config)
@@ -72,6 +73,7 @@ def login():
         telephone = request.form.get('telephone')
         password = request.form.get('password')
         user = User.query.filter(User.telephone == telephone).first()
+        # print(user.check_hash_password(password))
         if user and user.check_hash_password(password):
             session["user_id"] = user.id
             session.permanent = True
@@ -112,6 +114,7 @@ def regist():
             telephone = request.form.get('telephone')
             username = request.form.get('username')
             password1 = request.form.get('password1')
+            # print(password1)
             password2 = request.form.get('password2')
             city = request.form.get('city')
             introduce = request.form.get('introduce')
@@ -120,8 +123,11 @@ def regist():
             user = User.query.filter(User.id == user_id).first()
             user.telephone = telephone
             user.username = username
-            user.password1 = password1
-            user.password2 = password2
+            # user.password1 = password1
+            # user.password2 = password2
+            # user.password1 = generate_password_hash(password1)
+            # print(user.password1)
+            # user.password2 = generate_password_hash(password2)
             user.city = city
             user.introduce = introduce
             user.job = job
@@ -333,6 +339,10 @@ def my_context_processor():
         if user:
             return {"user":user}
     return {}   #注意，因为这个装饰器只能返回字典，所以即使没有这个用户也要返回空字典。
+
+# 1.上下文处理器应该返回一个字典，字典中的key会被模板中当成变量来渲染
+# 2.上下文处理器返回的字典，在所有页面中都是可以使用的
+# 3.被这个装饰器修饰的钩子函数，必须要返回一个字典，即使为空也要返回。
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port=5000)
