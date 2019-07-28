@@ -1,5 +1,5 @@
 # 仿照知乎部分功能的信息发布网站
-后端部分为`flask`框架；前端部分为`Boostrap`及自撸`CSS`； 数据库部分为`mysql` 。
+后端部分为`flask`框架；前端部分为`Boostrap`及自撸`CSS`； 数据库部分为`mysql` ，辅助工具`Navicat`。
 以下是具体介绍：
 ## 一、后端设计
 ## 1,注册/修改、登陆、注销
@@ -34,10 +34,24 @@
 **注意:**迭代对象`paginate.iter_pages()`在中间页面中的翻页需要用`for`到循环，而`paginate.pages`不是可迭代对象，所以只能用`paginate.iter_pages()`。
 >
 ## 3，加精
-> 在加精功能中
-
+> 在加精功能中我们使用了`Bootstrap`中的标签。逻辑设计上我们本想打算利用在提问过程中的创建时间使最近发提出的问题通过标签加精，但是本系统的维护全由我一人，在测试中很难完成用户并发提问操作，因此我利用问题表中`id`号最新的条目进行加精，后期我会设置为通过时间加精。
 >
-## 4，装饰器
+## 4，装饰器及上下文处理器
+> 首先谈谈上下文处理器`content_processor`，我们通过`session`判断用户登录状态，如果用户为登陆状态，则通过下文处理器`content_processor`完成当前登陆用户状态的输出，在模板中通过字典`key`与`value`对应完成在`HTML`页面中的变量渲染，以下是代码实现：。
+>
+```python
+@app.context_processor
+def my_context_processor():
+    user_id = session.get("user_id")
+    if user_id:
+        user = User.query.filter(User.id == user_id).first()
+        if user:
+            return {"user":user}
+    return {}   
+```
+>
+**注意:** 注意，因为这个装饰器只能返回字典，所以即使没有这个用户也要返回空字典。
+>
 ## 5，登录限制
 ## 6，提问(富文本编辑)
 ## 7，多类型关键字搜索
