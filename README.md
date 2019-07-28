@@ -21,11 +21,13 @@
 1，参数设置(具体可参考博客)。
 2，项目与`paginate`对应操作(通过`paginate.items`实现)。
 在翻页中，我们使用`paginate`中各参数完成翻页，也通过`Bootstrap`进行了一定的装饰。具体参数如下表：
+>
 | 参数      | 含义     | 参数            | 含义            |
 | :------ | :------- | :------------- | :-------------- |
 | paginate.prev_num  | 上页 | paginate.next_num | 下页 |
 | paginate.page       | 当前页      | paginate.pages | 总页数 |
 | paginate.iter_pages()       | 迭代对象      | paginate.total |  条目总数 |
+>
 **注意**迭代对象`paginate.iter_pages()`在中间页面中的翻页需要用`for`到循环，而`paginate.pages`不是可迭代对象，所以只能用`paginate.iter_pages()`。
 >
 ## 3，加精
