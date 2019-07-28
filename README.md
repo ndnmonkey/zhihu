@@ -28,9 +28,12 @@
 | paginate.page       | 当前页      | paginate.pages | 总页数 |
 | paginate.iter_pages()       | 迭代对象      | paginate.total |  条目总数 |
 >
-**注意**迭代对象`paginate.iter_pages()`在中间页面中的翻页需要用`for`到循环，而`paginate.pages`不是可迭代对象，所以只能用`paginate.iter_pages()`。
+**注意:**迭代对象`paginate.iter_pages()`在中间页面中的翻页需要用`for`到循环，而`paginate.pages`不是可迭代对象，所以只能用`paginate.iter_pages()`。
 >
 ## 3，加精
+> 在加精功能中
+
+>
 ## 4，装饰器
 ## 5，登录限制
 ## 6，提问(富文本编辑)
