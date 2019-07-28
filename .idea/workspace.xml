@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" name="Default" comment="" />
+    <list id="9c2c407c-9bea-4245-8993-24585dce1787" name="asasd" comment="">
+      <change beforePath="$PROJECT_DIR$/zlktqa.py" beforeDir="false" afterPath="$PROJECT_DIR$/zlktqa.py" afterDir="false" />
+    </list>
+    <list default="true" id="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emai_content.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/vertificate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/alembic.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/env.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/script.py.mako" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/0cf6f46de6db_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/4917e55e20d3_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/6886cb594292_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/68b71ae72e19_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/7116601b1914_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/85bc4981bcd7_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/migrations/versions/9efa14d0bc1c_.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/regist.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/regist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zlktqa.py" beforeDir="false" afterPath="$PROJECT_DIR$/zlktqa.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,11 +35,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/zhihu$Flask__zlktqa_py_.coverage" NAME="Flask (zlktqa.py) Coverage Results" MODIFIED="1564304799738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zlktqa$Flask__app_py_.coverage" NAME="Flask (zlktqa.py) Coverage Results" MODIFIED="1559391090935" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zlktqa$zlktqa.coverage" NAME="zlktqa Coverage Results" MODIFIED="1562833198238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/zlktqa$Flask__zlktqa_py_.coverage" NAME="Flask (zlktqa.py) Coverage Results" MODIFIED="1562759661969" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/zhihu$zlktqa.coverage" NAME="zlktqa Coverage Results" MODIFIED="1563778426562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/zhihu$Flask__zlktqa_py___1_.coverage" NAME="Flask (zlktqa.py) (1) Coverage Results" MODIFIED="1563513297480" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/zhihu$zlktqa.coverage" NAME="zlktqa Coverage Results" MODIFIED="1563867287455" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/zhihu$Flask__zlktqa_py___1_.coverage" NAME="Flask (zlktqa.py) (1) Coverage Results" MODIFIED="1564304714407" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/zlktqa$1.coverage" NAME="1 Coverage Results" MODIFIED="1559454923587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="G:/Python code/人口数据" />
   </component>
   <component name="FileEditorManager">
@@ -22,8 +48,8 @@
       <file leaf-file-name="zlktqa.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zlktqa.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+            <state relative-caret-position="209">
+              <caret line="98" column="29" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
               <folding>
                 <element signature="e#0#80#0" expanded="true" />
               </folding>
@@ -31,50 +57,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="regist.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="regist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/regist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-              <folding>
-                <element signature="n#form#0;n#!!top" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/search.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" column="12" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="79" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="263">
+              <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vertificate.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/vertificate.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1653">
+              <caret line="87" column="17" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_info.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/user_info.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="646">
+              <caret line="34" column="75" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
             </state>
           </provider>
         </entry>
@@ -99,7 +122,6 @@
       <find>login</find>
       <find>change_info</find>
       <find>deta</find>
-      <find>session</find>
       <find>uplo</find>
       <find>get</find>
       <find>请输入</find>
@@ -108,11 +130,19 @@
       <find>disc</find>
       <find>question.id</find>
       <find>sea</find>
-      <find>reg</find>
       <find>context_processor</find>
       <find>login_re</find>
       <find>regis</find>
+      <find>g.</find>
+      <find>detai</find>
+      <find>flash</find>
+      <find>reg</find>
+      <find>user_inf</find>
+      <find>session</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -136,9 +166,7 @@
         <option value="$PROJECT_DIR$/templates/change_info.html" />
         <option value="$PROJECT_DIR$/templates/change.html" />
         <option value="$PROJECT_DIR$/templates/chan_info.html" />
-        <option value="$PROJECT_DIR$/../zlktqa/templates/user_info.html" />
-        <option value="$PROJECT_DIR$/config.py" />
-        <option value="$PROJECT_DIR$/templates/user_info.html" />
+        <option value="G:/zlktqa/templates/user_info.html" />
         <option value="$PROJECT_DIR$/templates/other_user_info.html" />
         <option value="$PROJECT_DIR$/templates/detail.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
@@ -147,10 +175,13 @@
         <option value="$PROJECT_DIR$/templates/upload.html" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/templates/search.html" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/models.py" />
+        <option value="$PROJECT_DIR$/config.py" />
+        <option value="$PROJECT_DIR$/templates/user_info.html" />
+        <option value="$PROJECT_DIR$/templates/vertificate.html" />
         <option value="$PROJECT_DIR$/zlktqa.py" />
         <option value="$PROJECT_DIR$/templates/regist.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
       </list>
     </option>
   </component>
@@ -160,12 +191,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/zlktqa.py">
+      <ranges>
+        <range start1="6" end1="6" start2="6" end2="10" changelist="9c2c407c-9bea-4245-8993-24585dce1787" />
+        <range start1="12" end1="12" start2="16" end2="17" changelist="9c2c407c-9bea-4245-8993-24585dce1787" />
+        <range start1="13" end1="13" start2="18" end2="27" changelist="9c2c407c-9bea-4245-8993-24585dce1787" />
+        <range start1="49" end1="49" start2="63" end2="101" changelist="9c2c407c-9bea-4245-8993-24585dce1787" />
+        <range start1="100" end1="100" start2="152" end2="154" changelist="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" />
+        <range start1="108" end1="109" start2="162" end2="163" changelist="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" />
+        <range start1="111" end1="111" start2="165" end2="166" changelist="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" />
+        <range start1="137" end1="138" start2="192" end2="192" changelist="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" />
+      </ranges>
+    </file>
+  </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-36" />
-    <option name="y" value="72" />
+    <option name="x" value="517" />
+    <option name="y" value="162" />
     <option name="width" value="899" />
     <option name="height" value="758" />
   </component>
@@ -174,7 +219,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -191,6 +235,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,6 +249,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\github\zhihu\templates" />
+      <recent name="G:\github\zhihu" />
       <recent name="G:\Flask\zlktqa\static\tinymce\js\tinymce\langs" />
       <recent name="G:\Flask\zlktqa\static" />
       <recent name="G:\Flask\zlktqa\static\images" />
@@ -221,7 +268,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Flask server.zlktqa">
+  <component name="RunManager" selected="Flask server.Flask (zlktqa.py)">
+    <configuration name="detail.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/zhihu/templates/detail.html" />
+    <configuration name="other_user_info.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/zhihu/templates/other_user_info.html" />
     <configuration name="1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zlktqa" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,12 +279,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="G:/Python code/人口数据" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Python code/人口数据" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="G:/Python code/人口数据/1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Python code/人口数据/1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -244,6 +293,7 @@
     <configuration name="Flask (zlktqa.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
       <option name="additionalOptions" value="" />
       <option name="application" value="" />
+      <option name="flaskDebug" value="true" />
       <module name="zlktqa" />
       <option name="target" value="$PROJECT_DIR$/zlktqa.py" />
       <option name="targetType" value="PATH" />
@@ -251,6 +301,40 @@
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
+    <configuration name="Flask (zlktqa.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <option name="additionalOptions" value="" />
+      <option name="application" value="" />
+      <option name="flaskDebug" value="true" />
+      <module name="zlktqa" />
+      <option name="target" value="$PROJECT_DIR$/zlktqa.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+    </configuration>
+    <configuration name="Flask (zlktqa.py)" type="Python.FlaskServer" factoryName="Flask server" temporary="true" nameIsGenerated="true">
+      <option name="additionalOptions" value="" />
+      <option name="application" value="" />
+      <option name="flaskDebug" value="true" />
+      <module name="zlktqa" />
+      <option name="target" value="$PROJECT_DIR$/zlktqa.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -293,13 +377,16 @@
     <list>
       <item itemvalue="Flask server.zlktqa" />
       <item itemvalue="Flask server.Flask (zlktqa.py)" />
+      <item itemvalue="JavaScript Debug.other_user_info.html" />
+      <item itemvalue="JavaScript Debug.detail.html" />
       <item itemvalue="Python.1" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Flask server.Flask (zlktqa.py)" />
         <item itemvalue="Flask server.Flask (zlktqa.py)" />
-        <item itemvalue="Python.1" />
+        <item itemvalue="Flask server.Flask (zlktqa.py)" />
+        <item itemvalue="JavaScript Debug.detail.html" />
       </list>
     </recent_temporary>
   </component>
@@ -309,6 +396,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="4ccd9228-121e-49e8-ab26-80e1e0d88a1b" name="Default" comment="" />
+      <changelist id="9c2c407c-9bea-4245-8993-24585dce1787" name="asasd" comment="" />
       <created>1559220653993</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -318,16 +406,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="13" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.5007163" side_tool="true" weight="0.1127321" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="6" weight="0.3290735" />
-      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49928367" weight="0.18435013" />
+      <window_info anchor="bottom" id="Run" order="9" sideWeight="0.49928367" weight="0.25365207" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.12034384" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.19412607" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" />
       <window_info anchor="right" id="SciView" order="0" weight="0.17509364" />
@@ -340,7 +427,7 @@
       <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="8" weight="0.37002653" />
+      <window_info anchor="bottom" id="Find" order="8" weight="0.36918992" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="5" weight="0.32891247" />
     </layout>
   </component>
@@ -356,17 +443,10 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="15" />
+        <state relative-caret-position="418">
+          <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -529,13 +609,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zlktqa/templates/user_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/zlktqa/templates/user_info.html" />
     <entry file="file://$PROJECT_DIR$/static/css/login.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
@@ -543,27 +617,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zlktqa/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1159">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/user_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="40" column="124" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="124" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/other_user_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="33" column="33" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://G:/zlktqa/templates/detail.html" />
     <entry file="file://$PROJECT_DIR$/static/css/base.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -575,13 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -597,26 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="95" column="17" selection-start-line="89" selection-end-line="131" selection-end-column="6" />
-          <folding>
-            <element signature="e#3041#3048#1#HTML" expanded="true" />
-            <element signature="e#3234#3241#1#HTML" expanded="true" />
-            <element signature="e#3869#3876#1#HTML" expanded="true" />
-            <element signature="e#4056#4063#1#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="94" column="32" lean-forward="true" selection-end-line="149" selection-end-column="14" />
-          <folding>
-            <element signature="e#3636#3643#1#HTML" expanded="true" />
-            <element signature="e#3902#3909#0#HTML" expanded="true" />
-            <element signature="e#4377#4384#1#HTML" expanded="true" />
-            <element signature="e#4592#4599#1#HTML" expanded="true" />
-            <element signature="e#5097#5115#0#HTML" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,44 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="969">
           <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="12" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/exts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -675,17 +664,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/other_user_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="101" column="24" lean-forward="true" selection-end-line="149" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="72" />
+        <state relative-caret-position="475">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="54" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1653">
+          <caret line="87" column="17" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/vertificate.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/user_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="34" column="75" selection-start-line="34" selection-start-column="75" selection-end-line="34" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zlktqa.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="128" column="13" selection-start-line="128" selection-start-column="13" selection-end-line="128" selection-end-column="13" />
+        <state relative-caret-position="209">
+          <caret line="98" column="29" lean-forward="true" selection-start-line="98" selection-start-column="29" selection-end-line="98" selection-end-column="29" />
           <folding>
             <element signature="e#0#80#0" expanded="true" />
           </folding>
@@ -694,11 +749,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/regist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding>
-            <element signature="n#form#0;n#!!top" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="44" column="36" selection-start-line="44" selection-start-column="36" selection-end-line="44" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="16" column="21" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
         </state>
       </provider>
     </entry>

@@ -4,13 +4,27 @@ from models import User,Question,Anwser
 import config
 from decorators import login_required
 from sqlalchemy import or_
+from flask_mail import Mail, Message
+import random
+from emai_content import code_to_html
+
 # from flask_paginate import Pagination,get_page_parameter
 from werkzeug.security import generate_password_hash,check_password_hash
 
 app = Flask(__name__)
 app.config.from_object(config)
 db.init_app(app)
+mail = Mail(app)
 
+#设置验证池
+vercoede_pool = []
+
+#产生email验证码
+def generate_verification_code():
+    while True:
+        emai_key = str(random.random() * 1000000).split(".")[0]
+        if emai_key[0] != 0:
+            return emai_key
 
 @app.route('/')
 def index():
@@ -46,6 +60,44 @@ def index():
     }
 
     return render_template('index.html', **context)  # **的使用。
+
+
+@app.route('/vertificate/',methods=["POST","GET"])
+def vertificate():
+    if request.method == "GET":
+        #最多刷新1次,因为每刷新一次都会发一条邮件，所以限制发送次数。
+
+        user_id = session.get('user_id')
+        user = User.query.filter(User.id == user_id).first()
+        # print(user.email,type(user.email))
+        recipients = user.email
+
+        if len(vercoede_pool) < 1:
+            msg = Message(subject='Hello user!',  # 邮件主题
+                          sender="1257266527@qq.com",  # 需要使用默认发送者则不用填
+                          recipients=[user.email])  # 接受邮箱，可以多个
+            # 产生6位首位不为0的验证码
+            verification_code = generate_verification_code()
+            print("get:",verification_code)
+            vercoede_pool.append(verification_code)
+
+            # 将验证码放入html中，当成邮件内容发送出去
+            # 邮件内容会以文本和html两种格式呈现，而你能看到哪种格式取决于你的邮件客户端。
+            msg.body = code_to_html(verification_code)
+            msg.html = code_to_html(verification_code)
+            mail.send(msg)
+        return render_template('vertificate.html')
+
+    else:
+        vcoede = request.form.get("vcode")
+        if vcoede == vercoede_pool[-1]:  #最新发送的代码才有效，所以是[-1]。
+            # print(vcoede)
+            if len(vercoede_pool) >= 1:
+                vercoede_pool.pop() #输入值与最新验证码一样才能pop
+            return  redirect(url_for('regist')) #render_template('regist.html')
+        else:
+            # flash("验证码错误！")
+            return '验证码错误 ！'
 
 #这里没能解决搜索中文的功能
 #**现在解决了，原因在于我把创建时间也放进去了。
@@ -98,6 +150,8 @@ def regist():
             city = request.form.get('city')
             introduce = request.form.get('introduce')
             job = request.form.get('job')
+            email =request.form.get('email')
+
             user = User.query.filter(User.telephone == telephone).first()  #这里之前用的是"[0]",显示的是返回list溢出了。
             if user:
                 return "该手机已被注册！"
@@ -106,9 +160,10 @@ def regist():
                     return "两次密码不一致！"
                 else:
                     user = User(telephone = telephone,username = username,password= password1,city=city,
-                                introduce=introduce,job=job)
+                                introduce=introduce,job=job,email=email)
                     db.session.add(user)
                     db.session.commit()
+                    print(email)
                     return redirect(url_for('login'))
         else:
             telephone = request.form.get('telephone')
@@ -133,7 +188,6 @@ def regist():
             user.job = job
             db.session.commit()
             return redirect(url_for('login'))
-
 
 
 @app.route('/logout/')

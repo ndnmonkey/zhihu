@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <div class="jumbotron" style="padding-left: 60px" >
+      <h1>Hello, {{ user.username }}!</h1>
+      <p>   Please enter the verification code into the following table!</p>
+        <p>Verification code has been sent to your mailbox.  </p>
+        <form action="" method="post" align="right" style="padding-right: 50px">
+            <input name="vcode" type="text"  placeholder="Please enter your vertifacation code!" >
+            <input class="btn btn-primary btn-lg"  type="submit" value="Submit" >
+        </form>
+
+{#      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>#}
+    </div>
+
+      {% if get_flashed_messages()[0] %}
+         <div class="alert alert-danger" >{{ get_flashed_messages()[0] }}</div>
+      {% endif %}
+
+
+{% endblock %}

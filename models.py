@@ -11,6 +11,7 @@ class User(db.Model):
     job = db.Column(db.String(100),nullable=False)
     city=db.Column(db.String(100),nullable=False)
     introduce = db.Column(db.String(100),nullable=False)
+    email = db.Column(db.String(100),nullable=False)
 
     # questions = db.relationship('Question')
 
@@ -21,6 +22,7 @@ class User(db.Model):
         job = kwargs.get('job')
         city = kwargs.get('city')
         introduce = kwargs.get('introduce')
+        email = kwargs.get('email')
 
         self.telephone=telephone
         self.username=username
@@ -28,6 +30,7 @@ class User(db.Model):
         self.job = job
         self.city = city
         self.introduce = introduce
+        self.email=email
 
     def check_hash_password(self,raw_password):  #这里的参数是hash过的参数以及原始传入hash
         password = check_password_hash(self.password,raw_password)
