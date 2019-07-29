@@ -130,7 +130,16 @@ def deletequ(question_id):
 >
 
 ## 2，表设计
-在注册过程中用户输入的密码经过加密后存入数据库，在登陆过程中用户输入的密码也要经过验证处理与数据库进行匹配方能完成登陆过程，这一步通过`werkzeug`中`check_password_hash`来完成。
+> 我们对该系统设计了三张表，分别是 `User`、`Question`和`Anwser`，相互间的关系为：
+>
+>
+| 两表      | 连接关系     | 
+| :------ | :------- | 
+| User--Question  | User.id--Question.ahthor_id | 
+|  Anwser--Question       | Anwser.questionid--Question.id     | 
+| Anwser--Question       |  Anwser.ahthor_id--Question--id      |
+**注意** 这里`Question`和`Anwser`中均有`ahthor_id`字段。
+>
 
 ## 3，各表字段设计
 
