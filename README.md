@@ -138,10 +138,54 @@ def deletequ(question_id):
 | User--Question  | User.id--Question.ahthor_id | 
 |  Anwser--Question       | Anwser.questionid--Question.id     | 
 | Anwser--Question       |  Anwser.ahthor_id--Question--id      |
-**注意** 这里`Question`和`Anwser`中均有`ahthor_id`字段。
 >
-
+>**注意** 这里`Question`和`Anwser`中均有`ahthor_id`字段。
+>
+> 那么我们如何进行具体外键操作呢？我们有形如下面的操作：
+>
+```python
+    author_id = db.Column(db.Integer,db.ForeignKey('user.id'))
+    author = db.relationship('User',backref = db.backref('questions'))
+```
 ## 3，各表字段设计
+> 在第二点以及注册阶段基本也已讲过了，需要强调的是这里的加密功能也是在表单字段设计中的，所以贴一下示例代码：
+>
+```python
+    
+class User(db.Model):
+    __tablename__ = "user"
+    id = db.Column(db.Integer,primary_key=True,autoincrement=True)
+    telephone = db.Column(db.String(11),nullable=False)
+    username = db.Column(db.String(50),nullable=False)
+    password = db.Column(db.String(100),nullable=False)
+    job = db.Column(db.String(100),nullable=False)
+    city=db.Column(db.String(100),nullable=False)
+    introduce = db.Column(db.String(100),nullable=False)
+    email = db.Column(db.String(100),nullable=False)
+    # questions = db.relationship('Question')
+
+    def __init__(self,*args,**kwargs):
+        telephone = kwargs.get('telephone')
+        username = kwargs.get('username')
+        password = kwargs.get('password')
+        job = kwargs.get('job')
+        city = kwargs.get('city')
+        introduce = kwargs.get('introduce')
+        email = kwargs.get('email')
+
+        self.telephone=telephone
+        self.username=username
+        self.password = generate_password_hash(password)
+        self.job = job
+        self.city = city
+        self.introduce = introduce
+        self.email=email
+
+    def check_hash_password(self,raw_password):  #这里的参数是hash过的参数以及原始传入hash
+        password = check_password_hash(self.password,raw_password)
+        return password  #返回bool
+```
 
 ## 三、前端设计
-
+> 前端部分就只有`HTML`和少量`CSS`，其他样式也是用`Bootstrap`，所以不再细说，后期会在部分表单操作、刷新操作中加入`Ajax`以增强系统性能。
+>
