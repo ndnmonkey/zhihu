@@ -381,6 +381,7 @@ def deletean(anwserid):
 
     return redirect(url_for('detail' ,question_id=question_id,question=question_model,question_anws_num=question_anws_num))
 
+
 @app.route('/change_info/')
 def change_info():
     redirect(url_for('index'))
