@@ -73,7 +73,25 @@ def login_required(func):
 >在登陆监测后若发现游客为登陆状态，则有提问的功能，功能上和表单注册所用的技术一样，但是在文本的上传中，我们添加了带样式的可编辑文本提交功能，当然，这里的样式在目前的版本中仅限于文本颜色、字号等设置，后期会加入图片上传(由于这里图片文件在数据库中的存取我还没弄懂，因此暂时搁置这个功能，但是单纯的图片上传我已经了解)。富文本编辑实际也是对于`JavaScript`的使用。
 >
 ## 7，多类型关键字搜索
-## 8，多类型关键字搜索  个人信息管理（修改个人信息，删除问题）
+>在搜索栏中，我们把显示在主页的重要信息都作为可搜索关键字，包括问题表中标题和内容字段、用户表中用户名字段，这些关键字通过一个搜索框来实现，这里得益于类型判断(代码如下)，当我们查到用户时，会根据搜索框中用户名查询这个用户的所有问题，如果查不到用户则通过`sqlalchemy`中关键字 `or_`进行联合查询。后期会加上模糊查询。
+>
+'''python
+@app.route('/search/')
+def search():
+    q = request.args.get('q')
+
+    #这句是当搜索的是作者名字的时候的用法
+    au_id = User.query.filter(User.username.contains(q)).first()
+
+    #若找不到搜索的用户名字时候（au_id），就返回question标题和内容；找到名字就返回名字。
+    if not au_id:
+        questions = Question.query.filter(or_(Question.title.contains(q), Question.content.contains(q)))
+    else:
+        questions = Question.query.filter(Question.author_id.contains(au_id.id))
+
+    return render_template('search.html',questions=questions)
+'''
+## 8，个人信息管理（修改个人信息，删除问题）
 ## 9，评论（设计删除）   其他用户信息查看
 
 ##  二、数据库设计
