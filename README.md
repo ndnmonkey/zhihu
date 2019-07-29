@@ -150,8 +150,7 @@ def deletequ(question_id):
 ## 3，各表字段设计
 > 在第二点以及注册阶段基本也已讲过了，需要强调的是这里的加密功能也是在表单字段设计中的，所以贴一下示例代码：
 >
-```python
-    
+```python   
 class User(db.Model):
     __tablename__ = "user"
     id = db.Column(db.Integer,primary_key=True,autoincrement=True)
