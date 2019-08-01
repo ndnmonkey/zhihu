@@ -1,3 +1,7 @@
+'''
+NOTE:初始化该系统内question表需要有数据，不然index网页不能显示。
+发布到局域网：“--host=0.0.0.0 --port=5000”
+'''
 from flask import Flask,render_template,request,redirect,url_for,session,g,flash
 from exts import db
 from models import User,Question,Anwser
@@ -7,6 +11,7 @@ from sqlalchemy import or_
 from flask_mail import Mail, Message
 import random
 from emai_content import code_to_html
+from links import get_link
 
 # from flask_paginate import Pagination,get_page_parameter
 from werkzeug.security import generate_password_hash,check_password_hash
@@ -90,6 +95,7 @@ def vertificate():
 
     else:
         vcoede = request.form.get("vcode")
+        vcoede = vcoede.strip()
         if vcoede == vercoede_pool[-1]:  #最新发送的代码才有效，所以是[-1]。
             # print(vcoede)
             if len(vercoede_pool) >= 1:
@@ -341,6 +347,7 @@ def upload():
 #在个人资料页删除自己写的文章
 @app.route('/deletequ/<question_id>')
 def deletequ(question_id):
+    # print(question_id)
     question =Question.query.filter(Question.id ==question_id).first()
     if question:
         try:
@@ -381,6 +388,9 @@ def deletean(anwserid):
 
     return redirect(url_for('detail' ,question_id=question_id,question=question_model,question_anws_num=question_anws_num))
 
+
+
+
 @app.route('/change_info/')
 def change_info():
     redirect(url_for('index'))
@@ -398,5 +408,18 @@ def my_context_processor():
 # 2.上下文处理器返回的字典，在所有页面中都是可以使用的
 # 3.被这个装饰器修饰的钩子函数，必须要返回一个字典，即使为空也要返回。
 
+
+
+@app.route('/discovery/',methods=["POST","GET"])
+@login_required
+def  discovery():
+    if request.method == "GET":
+        return render_template('discovery.html')
+    else:
+        keyword = request.form.get('key')
+        page = 1  # 指的是显示第page页的信息。
+        link = get_link(keyword, page)
+        return render_template('discovery.html',link=link,keyword=keyword)
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=5000)
+    app.run()

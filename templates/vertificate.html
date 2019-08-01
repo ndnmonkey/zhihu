@@ -4,10 +4,19 @@
     <div class="jumbotron" style="padding-left: 60px" >
       <h1>Hello, {{ user.username }}!</h1>
       <p>   Please enter the verification code into the following table!</p>
-        <p>Verification code has been sent to your mailbox.  </p>
+        <p>Verification code will be sent to your mailbox soon!  </p>
+{#        <form action="" method="post" align="right" style="padding-right: 50px">#}
+{#            <input name="vcode" type="text"  placeholder="Please enter your vertifacation code!" >#}
+{#            <input class="btn btn-primary btn-lg"  type="submit" value="提交" >#}
+{##}
+{#        </form>#}
+
         <form action="" method="post" align="right" style="padding-right: 50px">
-            <input name="vcode" type="text"  placeholder="Please enter your vertifacation code!" >
-            <input class="btn btn-primary btn-lg"  type="submit" value="Submit" >
+          <div class="form-group">
+            <label for="exampleInputEmail1" style="padding-right: 510px">请输入验证码</label>
+            <input name="vcode" type="text" class="form-control" id="exampleInputEmail1" placeholder="Please enter your vertifacation code!">
+          </div>
+          <button type="submit" class="btn btn-default">提交</button>
         </form>
 
 {#      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>#}

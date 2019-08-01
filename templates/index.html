@@ -22,9 +22,9 @@
 {#    如果当前的问题id大于==id，则给它一个new标签，否则就按照常规输出#}
                         {% if question.id ==  question_max_id   %}
 {#                            <h6>{{ question.title }} <span class="label label-default">New</span></h6>#}
-                            <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a> <span class="label label-default">New</span>
+                            <a href="{{ url_for('detail',question_id = question.id) }}"><h4>{{ question.title }} <span class="label label-default">New</span></h4></a>
                         {% else %}
-                            <a href="{{ url_for('detail',question_id = question.id) }}">{{ question.title }}</a>
+                            <a href="{{ url_for('detail',question_id = question.id) }}"><h4>{{ question.title }}</h4></a>
                         {% endif %}
 
 {#                        #这里注意下带其他参数的question_id的用法#}
@@ -32,7 +32,10 @@
 
                     <p class="question-content" >
 {#                        这里的使得把形如“<p>&nbsp; &nbsp;打撒</p><p>&nbsp;</p>”这样的文本按照样式显示出来。#}
-                        {{ question.content|safe }}
+{#                        {{ question.content|safe }}#}
+                        <p class="lead">
+                            {{ question.content|safe }}
+                        </p>
                     </p>
 
                     <div class="question-info">
@@ -136,12 +139,12 @@
         <span class="label label-warning">总页数：{{ paginate.pages }}</span>
         <span class="label label-danger">一共有{{ paginate.total }}条数据</span>
 {#{{ (paginate.page /paginate.pages)*100}}#}
-        <br>
-<div class="progress">
-  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{ (paginate.page /paginate.pages)*100}}%">
-    <span class="sr-only">45% Complete</span>
-  </div>
-</div>
+{#        <br>#}
+{#<div class="progress">#}
+{#  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: {{ (paginate.page /paginate.pages)*100}}%">#}
+{#    <span class="sr-only">45% Complete</span>#}
+{#  </div>#}
+{#</div>#}
 
 {#    总页数：{{ paginate.pages }}#}
 {#    一共有{{ paginate.total }}条数据#}
